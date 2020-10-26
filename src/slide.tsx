@@ -2,7 +2,11 @@ import {For, createSignal, createMemo} from "solid-js";
 
 function SlideWrapper(props: {inner: JSX.Element, n: number, slide_idx: () => number}) {
     const shown = createMemo(() => props.slide_idx() == props.n);
-    return <div class="slide-wrapper" style={{"transition-timing-function": shown() ? "ease" : "step-end", opacity: shown() ? 1 : 0}}>{props.inner}</div>;
+    return <div class="slide-wrapper" style={{
+        "transition-timing-function": shown() ? "ease" : "step-end",
+        opacity: shown() ? 1 : 0,
+        "pointer-events": shown() ? "all" : "none",
+    }}>{props.inner}</div>;
 }
 
 export function Switcher(props: {children: JSX.Element[]}) {
