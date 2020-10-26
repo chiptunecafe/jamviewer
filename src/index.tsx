@@ -1,5 +1,4 @@
-import { render } from "solid-js/dom";
+import {render} from "solid-js/dom";
+import Slides from "./user/slides";
 
-const App = _ => <h1>hewwo</h1>;
-
-render(() => <App />, document.getElementById("root"));
+render(() => <Slides />, document.getElementById("root")!);
