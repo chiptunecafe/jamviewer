@@ -1,3 +1,5 @@
+/* general styling */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -29,6 +31,121 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #222;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
+    overflow: hidden;
+}
+
+.slide-video, .slide-contents, .slide-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-contents > * {
+    position: absolute;
+    margin: 0;
+    line-height: 1;
+}
+
+.scroller {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* compo styling */
+
+@font-face {
+    font-family: "Museo Slab";
+    src: url("assets/TheBuildup/Museo Slab.otf");
+}
+
+@font-face {
+    font-family: "Determination";
+    src: url("assets/Intermission/Determination.otf");
+}
+
+@font-face {
+    font-family: "Didot";
+    src: url("assets/SpookyCovers/Didot.otf");
+}
+
+.the_buildup > * {
+    font-family: "Museo Slab";
+    text-shadow: 0px 0px 0.1em rgba(255, 255, 255, 0.8);
+}
+
+.the_chase > * {
+    font-family: "QTLetterGoth";
+    font-weight: bold;
+    text-shadow: 0px 0px 0.1em rgba(255, 255, 255, 0.7);
+}
+
+.spooky_covers > * {
+    font-family: "Didot";
+    color: black;
+    text-shadow: 0px 0px 0.15em rgba(0, 0, 0, 0.8);
+    padding-top: 0.15em;
+}
+
+.title {
+    font-size: 3.6em;
+
+    top: 0.475em;
+    left: 0.45em;
+
+    width: 11.5em;
+    height: 1.2em;
+}
+
+.author {
+    font-size: 1.8em;
+
+    top: 3.55em;
+    left: 1em;
+
+    width: 23em;
+    height: 1.2em;
+}
+
+.comment {
+    font-size: 1.5em;
+
+    top: 1.35em;
+    left: 30.1em;
+
+    width: 8.7em;
+    text-align: right;
+}
+
+.intermission {
+    perspective: 20em;
+    perspective-origin: 50% 51.5%;
+}
+
+.intermission .perspective {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Determination";
+    font-size: 1.2em;
+    color: #48FEAC;
+
+    top: 9em;
+    left: 30.2em;
+
+    transform: rotateY(-43deg);
+
+    width: 10.5em;
+    height: 9.5em;
+    overflow: hidden;
+}
+
+.intermission .perspective > * {
+    margin: 0;
+    margin-top: 1em;
+    text-shadow: 0px 0px 0.15em rgba(72, 254, 172, 0.8);
+}
+
+.intermission .perspective .text {
+    flex-grow: 1;
 }

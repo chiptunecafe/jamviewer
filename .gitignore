@@ -1,2 +1,4 @@
 node_modules/
+src/user/data.json
 dist/bundle.js
+dist/assets
