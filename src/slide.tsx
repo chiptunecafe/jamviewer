@@ -19,12 +19,10 @@ export function Switcher(props: {children: JSX.Element[]}) {
 
     document.addEventListener('keydown', (ev: KeyboardEvent) => {
         switch (ev.key) {
-            case "Down":
-            case "ArrowDown":
+            case "PageDown":
                 set_slide_idx(Math.min(slide_idx() + 1, n_slides - 1));
                 break;
-            case "Up":
-            case "ArrowUp":
+            case "PageUp":
                 set_slide_idx(Math.max(slide_idx() - 1, 0));
                 break;
             default:
