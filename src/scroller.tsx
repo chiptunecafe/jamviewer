@@ -18,6 +18,7 @@ export default function Scroller(props: {text: string, ty: string}) {
             scrollpos = 0;
             el!.scrollLeft = 0;
             el!.style.setProperty("mask-image", "linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1))");
+            el!.style.setProperty("-webkit-mask-image", "linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1))");
         }
     };
 
@@ -34,6 +35,7 @@ export default function Scroller(props: {text: string, ty: string}) {
             scrollwidth = el!.scrollWidth;
             el!.innerHTML += el!.innerHTML;
             el!.style.setProperty("mask-image", "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))");
+            el!.style.setProperty("-webkit-mask-image", "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))");
 
             if (!already_scrolling) {
                 window.requestAnimationFrame(scroll_routine);
